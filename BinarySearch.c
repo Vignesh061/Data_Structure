@@ -26,12 +26,20 @@ int binarySearch(int arr[], int size, int key) {
 }
 
 int main() {
-    int arr[] = {2, 3, 4, 10, 40};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int key;
+    int size;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &size);
+    
+    int arr[size]; // Declare the array with the specified size
 
+    printf("Enter %d elements of the array \n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]); // Input each element
+    }
+
+    int key;
     printf("Enter the value to search: ");
-    scanf("%d", &key);
+    scanf("%d", &key); // Input the search key
 
     // Perform binary search
     int result = binarySearch(arr, size, key);
